@@ -1,5 +1,6 @@
 package cn.edu.cqu.caijimovie.activities;
 
+import android.graphics.drawable.GradientDrawable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -28,6 +29,13 @@ public class SignUpInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_in);
 
+
+        iniFragData();
+    }
+
+
+    //Todo:初始化两个Fragments的界面
+    private void iniFragData() {
         viewPager=findViewById(R.id.viewPagerSign);
         //初始化两个fragment
         fragments=new ArrayList<>();
@@ -39,9 +47,12 @@ public class SignUpInActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
 
-        //设置TabLayout
+        //设置TabLayout样式
         tabLayout = findViewById(R.id.signTabLayout);
         tabLayout.setupWithViewPager(viewPager, true);
-//        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        tabLayout.setUnboundedRipple(true);
+        GradientDrawable gradientDrawable = new GradientDrawable();
+        gradientDrawable.setCornerRadius(2);
+        tabLayout.setSelectedTabIndicator(gradientDrawable);
     }
 }

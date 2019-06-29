@@ -17,8 +17,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabIndicatorHeight="60dp"
+            app:tabIndicatorFullWidth="true"
+            app:tabMaxWidth="0dp"
             app:tabIndicatorColor="@color/design_default_color_primary_dark"
-            app:tabGravity="center"
+            app:tabGravity="fill"
             app:tabMode="fixed"
             app:layout_constraintTop_toTopOf="parent" />
 

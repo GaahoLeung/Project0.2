@@ -3,6 +3,7 @@ package cn.edu.cqu.caijimovie.fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import cn.edu.cqu.caijimovie.R;
 import cn.edu.cqu.caijimovie.activities.MainActivity;
@@ -23,9 +25,6 @@ import cn.edu.cqu.caijimovie.activities.SplashActivity;
 public class SignInFragment extends MyFragment implements View.OnClickListener {
 
     Context mContext;
-    private Button btnLogin;
-    private Button btnSwitchToRegister;
-
     public SignInFragment() {
         // Required empty public constructor
         super("Sign In");
@@ -35,35 +34,22 @@ public class SignInFragment extends MyFragment implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         mContext=getActivity();
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        //创建视图
+        //创建布局视图
         return inflater.inflate(R.layout.fragment_sign_in, container, false);
     }
-
-    //Todo:绑定数据
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState){
-        super.onActivityCreated(savedInstanceState);
-    }
-
     @Override
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.btnLogin:{
                 //Todo:验证登录
+                Toast.makeText(mContext.getApplicationContext(), "登录成功!", Toast.LENGTH_LONG).show();
                 Intent intent= new Intent(mContext.getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
-
         }
-
-
-
     }
-
 
 }
