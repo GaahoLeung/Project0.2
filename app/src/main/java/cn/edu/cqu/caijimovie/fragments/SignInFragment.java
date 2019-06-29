@@ -20,7 +20,7 @@ import cn.edu.cqu.caijimovie.activities.SplashActivity;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SignInFragment extends Fragment implements View.OnClickListener {
+public class SignInFragment extends MyFragment implements View.OnClickListener {
 
     Context mContext;
     private Button btnLogin;
@@ -28,7 +28,7 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
 
     public SignInFragment() {
         // Required empty public constructor
-        super();
+        super("Sign In");
     }
     public void onCreate(Bundle savedInstanceState){
         //获取上下文
@@ -58,13 +58,12 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
                 Intent intent= new Intent(mContext.getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
-            case R.id.btnSwitch2Register:{
-                //Todo:销毁Fragment
 
-            }
         }
 
 
 
     }
+
+
 }

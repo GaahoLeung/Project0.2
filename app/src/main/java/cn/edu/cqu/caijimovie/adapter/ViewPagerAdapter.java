@@ -1,15 +1,18 @@
 package cn.edu.cqu.caijimovie.adapter;
 
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
-    private final ArrayList<Fragment> fragments;
+import cn.edu.cqu.caijimovie.fragments.MyFragment;
 
-    public ViewPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments) {
+public class ViewPagerAdapter extends FragmentPagerAdapter {
+    private final ArrayList<MyFragment> fragments;
+
+    public ViewPagerAdapter(FragmentManager fm, ArrayList<MyFragment> fragments) {
         super(fm);
         this.fragments=fragments;
     }
@@ -22,6 +25,12 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return fragments.size();
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return fragments.get(position).getTitle();
     }
 }
 

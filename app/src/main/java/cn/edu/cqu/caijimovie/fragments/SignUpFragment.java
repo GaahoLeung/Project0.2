@@ -12,10 +12,11 @@ import cn.edu.cqu.caijimovie.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SignUpFragment extends Fragment {
+public class SignUpFragment extends MyFragment {
 
 
     public SignUpFragment() {
+        super("Sign Up");
         // Required empty public constructor
     }
 

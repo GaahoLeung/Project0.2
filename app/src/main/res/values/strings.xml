@@ -15,4 +15,5 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign UP</string>
     <string name="log_into_your_account">Sign In Your Account</string>
+    <string name="passwordConfirm">Confirm Password</string>
 </resources>

@@ -1,5 +1,6 @@
 package cn.edu.cqu.caijimovie.activities;
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 
 import cn.edu.cqu.caijimovie.R;
 import cn.edu.cqu.caijimovie.adapter.ViewPagerAdapter;
+import cn.edu.cqu.caijimovie.fragments.MyFragment;
 import cn.edu.cqu.caijimovie.fragments.SignInFragment;
 import cn.edu.cqu.caijimovie.fragments.SignUpFragment;
 
@@ -16,9 +18,11 @@ public class SignUpInActivity extends AppCompatActivity {
 
     ViewPager viewPager;
 
-    ArrayList<Fragment> fragments;
+    ArrayList<MyFragment> fragments;
 
     ViewPagerAdapter adapter;
+
+    TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,5 +37,11 @@ public class SignUpInActivity extends AppCompatActivity {
         //设置ViewPager的适配器
         adapter=new ViewPagerAdapter(getSupportFragmentManager(),fragments);
         viewPager.setAdapter(adapter);
+
+
+        //设置TabLayout
+        tabLayout = findViewById(R.id.signTabLayout);
+        tabLayout.setupWithViewPager(viewPager, true);
+//        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
     }
 }
