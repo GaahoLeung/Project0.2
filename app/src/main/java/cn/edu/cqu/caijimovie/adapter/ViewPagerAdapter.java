@@ -1,36 +1,50 @@
 package cn.edu.cqu.caijimovie.adapter;
 
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import cn.edu.cqu.caijimovie.fragments.MyFragment;
+
+/**
+ *  * @author RB
+ *  * @date 2018/1/17 17:30
+ *  
+ */
+
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
-    private final ArrayList<MyFragment> fragments;
 
-    public ViewPagerAdapter(FragmentManager fm, ArrayList<MyFragment> fragments) {
-        super(fm);
-        this.fragments=fragments;
+
+    private final List<Fragment> mFragmentList = new ArrayList<>();
+
+
+    public ViewPagerAdapter(FragmentManager manager) {
+        super(manager);
     }
+
 
     @Override
     public Fragment getItem(int position) {
-        return fragments.get(position);
+        return mFragmentList.get(position);
     }
 
+
     @Override
+
+
     public int getCount() {
-        return fragments.size();
+        return mFragmentList.size();
     }
 
-    @Nullable
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return fragments.get(position).getTitle();
+
+    public void addFragment(Fragment fragment) {
+        mFragmentList.add(fragment);
     }
+
+
 }
+
 
