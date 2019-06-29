@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SignInFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="15dp">
+
+        <EditText
+            android:id="@+id/txtEmali"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/txt_shape"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
+
+
+        <EditText
+            android:id="@+id/txtPsw"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/txt_shape"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="#eeeeee"
+            android:text="@string/sign_in"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnSwitch2Register"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#4a9494"
+            android:text="@string/create_a_new_account"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</FrameLayout>
