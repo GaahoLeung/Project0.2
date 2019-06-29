@@ -1,5 +1,6 @@
 package cn.edu.cqu.caijimovie.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,8 +11,13 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
+import cn.edu.cqu.caijimovie.R;
+
+@SuppressLint("ValidFragment")
 public class MyFragment extends Fragment {
 
     private final String title;
@@ -19,6 +25,7 @@ public class MyFragment extends Fragment {
     Context mContext;
 
 
+    @SuppressLint("ValidFragment")
     public MyFragment(String title) {
         super();
         this.title = title;

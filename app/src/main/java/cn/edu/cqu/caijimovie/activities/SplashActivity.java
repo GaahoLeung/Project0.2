@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
                 //停留2s
                 SystemClock.sleep(2000);
                 //进入登录界面
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, SignUpInActivity.class);
                 startActivity(intent);
                 finish();
             }
