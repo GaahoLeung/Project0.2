@@ -51,8 +51,5 @@ public class SignUpInActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.signTabLayout);
         tabLayout.setupWithViewPager(viewPager, true);
         tabLayout.setUnboundedRipple(true);
-        GradientDrawable gradientDrawable = new GradientDrawable();
-        gradientDrawable.setCornerRadius(2);
-        tabLayout.setSelectedTabIndicator(gradientDrawable);
     }
 }
