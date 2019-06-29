@@ -1,6 +1,7 @@
 package cn.edu.cqu.caijimovie.fragments;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
@@ -21,28 +22,40 @@ import cn.edu.cqu.caijimovie.activities.SplashActivity;
  */
 public class SignInFragment extends Fragment implements View.OnClickListener {
 
+    Context mContext;
     private Button btnLogin;
     private Button btnSwitchToRegister;
 
     public SignInFragment() {
         // Required empty public constructor
+        super();
     }
-
+    public void onCreate(Bundle savedInstanceState){
+        //获取上下文
+        super.onCreate(savedInstanceState);
+        mContext=getActivity();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        //创建视图
         return inflater.inflate(R.layout.fragment_sign_in, container, false);
     }
 
+    //Todo:绑定数据
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
+    }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.btnLogin:{
                 //Todo:验证登录
-                Intent intent= new Intent(getActivity().getApplicationContext(), MainActivity.class);
+                Intent intent= new Intent(mContext.getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
             case R.id.btnSwitch2Register:{
