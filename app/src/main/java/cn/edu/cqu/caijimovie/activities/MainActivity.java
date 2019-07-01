@@ -5,8 +5,10 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import cn.edu.cqu.caijimovie.R;
 import cn.edu.cqu.caijimovie.adapter.ViewPagerAdapter;
@@ -20,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigation;
 
 
-
-
+    //Todo:页面初始化
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPagerMain);
         navigation = findViewById(R.id.nav_view);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
 
 
         /*侧滑监听*/
@@ -94,4 +96,26 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new MainMeFragment());
         viewPager.setAdapter(adapter);
     }
+
+
+    //Todo:点击两次返回键退出
+    private long exitTime = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+
+
 }

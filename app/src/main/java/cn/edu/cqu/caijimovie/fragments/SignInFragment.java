@@ -51,7 +51,6 @@ public class SignInFragment extends MyFragment implements View.OnClickListener {
         Button btnSignIn = (Button) getActivity().findViewById(R.id.btnLogin);
         btnClicked(btnSignIn);//初始化按钮事件
     }
-
     public void btnClicked(View v) {
         switch (v.getId()) {
             case R.id.btnLogin:
@@ -62,6 +61,7 @@ public class SignInFragment extends MyFragment implements View.OnClickListener {
                     public void onClick(View v) {
                         Intent intent = new Intent(getActivity().getApplicationContext(), MainActivity.class);
                         startActivity(intent);
+                        getActivity().finish();
                     }
                 });
                 break;
