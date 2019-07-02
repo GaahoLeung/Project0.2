@@ -40,16 +40,5 @@ public class MainHomeFragment extends MyFragment {
         mSearchView.setSubmitButtonEnabled(true);
 
     }
-//    @Override
-//    public void setUserVisibleHint(boolean isVisibleToUser) {
-//        super.setUserVisibleHint(isVisibleToUser);
-//        if (isVisibleToUser) {
-//            //相当于Fragment的onResume
-//        } else {
-//            //相当于Fragment的onPause
-//            mSearchView.clearFocus();
-//        }
-//    }
-
 
 }

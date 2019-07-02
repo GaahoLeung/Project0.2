@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 HideKeyboard(viewPager);
             }
 
-
             @Override
             public void onPageSelected(int position) {
                 if (menuItem != null) {
@@ -122,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm.isActive()) {
             imm.hideSoftInputFromWindow(v.getApplicationWindowToken(), 0);
-
         }
     }
 
