@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/item_movie_poster"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8.5"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/item_movie_title_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="孟买酒店（2018）"
+                android:textSize="24dp"
+                android:layout_gravity="center"
+                android:ellipsize="end" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="">
+
+                <cn.edu.cqu.caijimovie.customize_widget.XLHRatingBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ratingBarRated"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    app:numStars="5"
+                    app:rating="3.5"
+                    app:ratingViewClass="cn.edu.cqu.caijimovie.customize_widget.SimpleRatingView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/ratingTextRatedInt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="10dp"
+                    android:text="8."
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/ratingTextRatedDec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="4"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tagText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2018 / 澳大利亚 美国 印度 / 剧情 历史 惊悚 / 安东尼·马拉斯 / 艾米·汉莫 纳赞宁·波妮阿蒂"
+                android:lines="2"
+                android:ellipsize="end" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/durationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="108分钟" />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+    </LinearLayout>
+</FrameLayout>

@@ -17,4 +17,5 @@
     <string name="log_into_your_account">Sign In Your Account</string>
     <string name="passwordConfirm">Confirm Password</string>
     <string name="menu_search">Search</string>
+    <string name="rate">评分:</string>
 </resources>
