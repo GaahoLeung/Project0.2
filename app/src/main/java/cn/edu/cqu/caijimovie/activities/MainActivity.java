@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-
             }
 
 
@@ -81,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     viewPager.setCurrentItem(2);
                     return true;
             }
-            return false;
+            return true;
         }
     };
 

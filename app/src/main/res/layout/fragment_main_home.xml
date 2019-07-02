@@ -3,12 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.MainHomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.SearchView
+        android:id="@+id/search_movie"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:queryHint="Search"
+        android:inputType="text"
+        android:layout_marginRight="15dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
 
     <ScrollView
         android:layout_width="match_parent"
