@@ -47,7 +47,6 @@ public class SignUpInActivity extends AppCompatActivity {
         adapter = new ViewPagerWithTabAdapter(getSupportFragmentManager(), fragments);
         viewPager.setAdapter(adapter);
 
-
         //设置TabLayout样式
         tabLayout = findViewById(R.id.signTabLayout);
         tabLayout.setupWithViewPager(viewPager, true);

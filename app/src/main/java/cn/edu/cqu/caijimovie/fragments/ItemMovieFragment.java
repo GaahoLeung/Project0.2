@@ -2,20 +2,15 @@ package cn.edu.cqu.caijimovie.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
-import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.xlhratingbar_lib.XLHRatingBar;
 
 import cn.edu.cqu.caijimovie.R;
-import cn.edu.cqu.caijimovie.activities.SignUpInActivity;
-import cn.edu.cqu.caijimovie.activities.SplashActivity;
 import cn.edu.cqu.caijimovie.customize_widget.SimpleRatingView;
 import cn.edu.cqu.caijimovie.item.Movie;
-import cn.edu.cqu.caijimovie.utils.ThreadUtils;
+import cn.edu.cqu.caijimovie.utils.ThreadUtil;
 
 //Todo:
 @SuppressLint("ValidFragment")
@@ -31,7 +26,7 @@ public class ItemMovieFragment extends Fragment {
 
         initMovieInfo();
         initRateView();
-        ThreadUtils.runInThread(new Runnable() {
+        ThreadUtil.runInThread(new Runnable() {
             @Override
             public void run() {
                 initPoster();

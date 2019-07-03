@@ -2,7 +2,7 @@ package cn.edu.cqu.caijimovie.utils;
 
 import android.os.Handler;
 
-public class ThreadUtils {
+public class ThreadUtil {
     /*子线程执行TASK*/
     public static void runInThread(Runnable task){
         new Thread(task).start();
