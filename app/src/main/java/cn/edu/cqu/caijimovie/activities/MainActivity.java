@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.KeyEvent;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private MenuItem menuItem;
     private BottomNavigationView navigation;
-
+    private SwipeRefreshLayout refresh;
 
     //Todo:页面初始化
     @Override
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPagerMain);
         navigation = findViewById(R.id.nav_view);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
 
 
 
@@ -53,13 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 menuItem = navigation.getMenu().getItem(position);
                 menuItem.setChecked(true);
             }
-
-
             @Override
             public void onPageScrollStateChanged(int state) {
+
             }
         });
-
 
         setupViewPager(viewPager);
     }
@@ -101,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
     //Todo:点击两次返回键退出
     private long exitTime = 0;
-
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
@@ -117,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
+    //Todo:隐藏软键盘
     public static void HideKeyboard(View v) {
         InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm.isActive()) {

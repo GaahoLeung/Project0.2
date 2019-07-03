@@ -1,4 +1,4 @@
-package cn.edu.cqu.caijimovie.item;
+package cn.edu.cqu.caijimovie.entities;
 
 public class Movie {
 

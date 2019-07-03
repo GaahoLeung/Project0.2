@@ -9,7 +9,7 @@ import com.example.xlhratingbar_lib.XLHRatingBar;
 
 import cn.edu.cqu.caijimovie.R;
 import cn.edu.cqu.caijimovie.customize_widget.SimpleRatingView;
-import cn.edu.cqu.caijimovie.item.Movie;
+import cn.edu.cqu.caijimovie.entities.Movie;
 import cn.edu.cqu.caijimovie.utils.ThreadUtil;
 
 //Todo:
