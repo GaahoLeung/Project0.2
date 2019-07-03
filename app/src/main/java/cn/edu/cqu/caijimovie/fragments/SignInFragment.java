@@ -124,7 +124,7 @@ public class SignInFragment extends MyFragment implements View.OnClickListener {
                                             //将json数据与实体类相关联
                                             Result result = new Gson().fromJson(responseString, Result.class);
 
-                                            logstatus = result.getReturnvalue();
+                                            logstatus = result.getReturnValue();
                                             Log.i("json", "json对象: " + logstatus);
                                             switch (logstatus) {
                                                 case 0:
