@@ -49,7 +49,7 @@ public class User implements Serializable {
     /**
      * 头像
      **/
-    private byte potrait;
+    private byte[] potrait;
 
     public User() {
     }
@@ -57,8 +57,7 @@ public class User implements Serializable {
     /**
      * 构造方法
      *
-     * @param id   编号
-     * @param name 姓名
+
      */
 //    public User(int id, String name) {
 //        super();
@@ -194,7 +193,7 @@ public class User implements Serializable {
      *
      * @param potrait
      */
-    public void setPotrait(byte potrait) {
+    public void setPotrait(byte[] potrait) {
         this.potrait = potrait;
     }
 
@@ -203,7 +202,7 @@ public class User implements Serializable {
      *
      * @return potrait
      */
-    public byte getPotrait() {
+    public byte[] getPotrait() {
         return potrait;
     }
 

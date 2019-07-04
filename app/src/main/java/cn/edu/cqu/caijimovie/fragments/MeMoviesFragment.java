@@ -9,11 +9,7 @@ import android.view.ViewGroup;
 
 import cn.edu.cqu.caijimovie.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MeMoviesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class MeMoviesFragment extends Fragment {
 
     public MeMoviesFragment() {

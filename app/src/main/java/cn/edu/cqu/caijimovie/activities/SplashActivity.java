@@ -20,15 +20,8 @@ public class SplashActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
         ThreadUtil.runInThread(new Runnable() {
-
-
             @Override
             public void run() {
-                //停留2s
-                SystemClock.sleep(2000);
-
-                //如果有,加载主界面
-
 
             }
         });

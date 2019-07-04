@@ -6,22 +6,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.MainHomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <android.support.v7.widget.SearchView
-        android:id="@+id/search_movie"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:queryHint="Search"
-        android:inputType="text"
-        android:layout_marginRight="15dp"
-        android:focusable="false"
-        android:focusableInTouchMode="false" />
+        android:orientation="vertical">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:queryHint="Search"
+            android:inputType="text"
+            android:layout_marginRight="15dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/frag_main_home_recycler_verticle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </ScrollView>
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
 
 </FrameLayout>

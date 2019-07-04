@@ -96,6 +96,12 @@ public class SignInFragment extends MyFragment implements View.OnClickListener {
                         usermailstr = usermail.getText().toString().trim();
                         userpasswordstr = userpassword.getText().toString().trim();
 
+                        //Todo:快速调试用
+                        Intent intent = new Intent(getActivity().getApplicationContext(), MainActivity.class);
+                        intent.putExtra("currentuser", user);
+                        startActivity(intent);
+                        getActivity().finish();
+
                         if (usermailstr == null || usermailstr.equals("") || userpasswordstr == null || userpasswordstr.equals("")) {
                             Toast.makeText(getActivity(), "用户名或密码为空！", Toast.LENGTH_SHORT).show();
                         } else if (!CheckInfoUtils.isEmail(usermailstr)) {
